@@ -17,14 +17,14 @@ const footerNav = [
         href: 'http://ie.ncu.edu.cn/kxyj/kypt/43fd339753aa4f6e9b2755589419ac9b.htm',
       },
     ],
-    CooperatingInstitutions: [
-      { title: 'DIN', href: 'https://twitter.com/din_lol_' },
-      { title: 'TerpLayer', href: 'https://twitter.com/terp_layer' },
-      {
-        title: 'NonceGeek DAO',
-        href: 'https://www.noncegeek.com/#/',
-      },
-    ],
+    // CooperatingInstitutions: [
+    //   { title: 'DIN', href: 'https://twitter.com/din_lol_' },
+    //   { title: 'TerpLayer', href: 'https://twitter.com/terp_layer' },
+    //   {
+    //     title: 'NonceGeek DAO',
+    //     href: 'https://www.noncegeek.com/#/',
+    //   },
+    // ],
     TwitterNews: [
       { title: 'Collective Movement', href: 'https://x.com/SCIW3ORG/status/1819917979741753825' },
       { title: 'SCI-WEB3.0', href: 'https://x.com/SCIW3ORG/status/1822587307490234684' },
