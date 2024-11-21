@@ -127,6 +127,11 @@ export function NavItems() {
           Papers
         </Link>
       </li>
+      <li>
+        <Link href="/donate" className="hover:text-sky-500 dark:hover:text-sky-400">
+          Donate
+        </Link>
+      </li>
     </>
   )
 }

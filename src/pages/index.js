@@ -111,7 +111,7 @@ function Header() {
           <div className="flex items-start justify-between">
             <div>
               <h1 className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-left dark:text-white">
-                SCI on Web3: URANIA
+                SCIW3.org
               </h1>
               <br></br>
               <p className="mt-6 text-lg text-slate-600 max-w-3xl dark:text-slate-400 text-left">
