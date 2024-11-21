@@ -4,7 +4,7 @@ import { Logo } from '@/components/Logo'
 const footerNav = [
   {
     Community: [
-      { title: 'GitHub', href: 'https://github.com/DesciDao' },
+      { title: 'GitHub', href: 'https://github.com/SCIW3/' },
       // { title: 'Discord', href: '/discord' },
       { title: 'Twitter', href: 'https://x.com/SCIW3ORG' },
       // { title: 'YouTube', href: 'https://www.youtube.com/tailwindlabs' },

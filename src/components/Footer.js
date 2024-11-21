@@ -14,7 +14,7 @@ export function Footer({ className }) {
 function FooterContent() {
   return (
     <div className="text-center">
-      <Logo className="h-10 w-auto mx-auto" />
+      <Logo className="h-0 w-0 mx-auto" />
       <p className="mt-4 text-sm leading-6 text-slate-500">
         &copy; {new Date().getFullYear()} Desci Cyou Labs Inc. All rights reserved.
       </p>

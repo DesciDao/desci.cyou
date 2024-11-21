@@ -22,6 +22,9 @@ import clsx from 'clsx'
 import { ThemeToggle } from '@/components/ThemeToggle'
 import socialCardLarge from '@/img/social-card-large.jpg'
 
+import urania from '@/img/urania.png'
+import StarryBackground from '@/components/starry-background'
+
 function Header() {
   return (
     <header className="relative">
@@ -32,16 +35,24 @@ function Header() {
             styles.beams
           )}
         >
-          <div
+          {/* <div
             className="absolute inset-0 bg-grid-slate-900/[0.04] bg-[bottom_1px_center] dark:bg-grid-slate-400/[0.05] dark:bg-bottom dark:border-b dark:border-slate-100/5"
             style={{
               maskImage: 'linear-gradient(to bottom, transparent, black)',
               WebkitMaskImage: 'linear-gradient(to bottom, transparent, black)',
             }}
-          />
+          /> */}
+          <StarryBackground />
         </div>
         <div className="relative pt-6 lg:pt-8 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200">
-          <Logo className="w-auto h-10" />
+          <div className="flex items-center">
+            <Logo className="w-auto h-10 mr-8" />
+            <nav>
+              <ul className="flex items-center gap-x-8">
+                <NavItems />
+              </ul>
+            </nav>
+          </div>
           <div className="flex items-center">
             <SearchButton className="text-slate-500 hover:text-slate-600 w-8 h-8 -my-1 flex items-center justify-center md:hidden dark:hover:text-slate-300">
               <span className="sr-only">Search</span>
@@ -61,15 +72,25 @@ function Header() {
             </SearchButton>
             <NavPopover className="-my-1 ml-2 -mr-1" display="md:hidden" />
             <div className="hidden md:flex items-center">
-              <nav>
-                <ul className="flex items-center gap-x-8">
-                  <NavItems />
-                </ul>
-              </nav>
               <div className="flex items-center border-l border-slate-200 ml-6 pl-6 dark:border-slate-800">
                 <ThemeToggle />
                 <a
-                  href="https://github.com/DesciDao/desci.cyou"
+                  target="_blank"
+                  href="https://x.com/intent/follow?screen_name=SCIW3ORG"
+                  className="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
+                >
+                  <span className="sr-only">Desci Cyou on Twitter</span>
+                  <svg
+                    className="w-5 h-5"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    aria-hidden="true"
+                  >
+                    <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" />
+                  </svg>
+                </a>
+                <a
+                  href="https://github.com/DesciDao/"
                   className="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
                 >
                   <span className="sr-only">Desci Cyou on GitHub</span>
@@ -87,60 +108,22 @@ function Header() {
           </div>
         </div>
         <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
-          <h1 className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-left dark:text-white">
-            Decentralized Science, See You Involved.
-          </h1>
-          <p className="mt-6 text-lg text-slate-600 max-w-3xl dark:text-slate-400 text-left">
-            Collaboration
-            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">
-              {' '}
-              Without Borders
-            </code>{' '}
-            , and Join the Movement: Building Decentralized Science Together for a Future Where{' '}
-            <code className="font-mono font-medium text-sky-500 dark:text-sky-400">
-              Everyone Contributes
-            </code>{' '}
-            . Empowering Science Through Decentralization.
-          </p>
-          <div className="mt-6 sm:mt-10 flex space-x-6 text-sm">
-            <NextLink
-              href="/paper"
-              className="bg-slate-900 hover:bg-slate-700 focus:outline-none focus:ring-2 focus:ring-slate-400 focus:ring-offset-2 focus:ring-offset-slate-50 text-white font-semibold h-12 px-6 rounded-lg w-full flex items-center justify-center sm:w-auto dark:bg-sky-500 dark:highlight-white/20 dark:hover:bg-sky-400"
-            >
-              Get started
-            </NextLink>
-            <SearchButton className="hidden sm:flex items-center w-72 text-left space-x-3 px-4 h-12 bg-white ring-1 ring-slate-900/10 hover:ring-slate-300 focus:outline-none focus:ring-2 focus:ring-sky-500 shadow-sm rounded-lg text-slate-400 dark:bg-slate-800 dark:ring-0 dark:text-slate-300 dark:highlight-white/5 dark:hover:bg-slate-700">
-              {({ actionKey }) => (
-                <>
-                  <svg
-                    width="24"
-                    height="24"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="2"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    className="flex-none text-slate-300 dark:text-slate-400"
-                    aria-hidden="true"
-                  >
-                    <path d="m19 19-3.5-3.5" />
-                    <circle cx="11" cy="11" r="6" />
-                  </svg>
-                  <span className="flex-auto">Quick search...</span>
-                  {actionKey && (
-                    <kbd className="font-sans font-semibold dark:text-slate-500">
-                      <abbr
-                        title={actionKey[1]}
-                        className="no-underline text-slate-300 dark:text-slate-500"
-                      >
-                        {actionKey[0]}
-                      </abbr>{' '}
-                      K
-                    </kbd>
-                  )}
-                </>
-              )}
-            </SearchButton>
+          <div className="flex items-start justify-between">
+            <div>
+              <h1 className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-left dark:text-white">
+                SCI on Web3: URANIA
+              </h1>
+              <br></br>
+              <p className="mt-6 text-lg text-slate-600 max-w-3xl dark:text-slate-400 text-left">
+                Buidl the Web3-powered Science System for the
+                <code className="font-mono font-medium text-sky-500 dark:text-sky-400">
+                  {' '}
+                  NEXT
+                </code>{' '}
+                Generation.
+              </p>
+            </div>
+            <img src={urania.src} alt="URANIA" className="w-80 object-contain" />
           </div>
         </div>
       </div>
@@ -169,45 +152,35 @@ export default function Home() {
       </Head>
       <div className="mb-20 overflow-hidden sm:mb-32 md:mb-40">
         <Header />
+
         <section className="text-center px-8 mt-20 sm:mt-32 md:mt-40">
           <h2 className="text-slate-900 text-4xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
-            “Centralized Science” don’t actually work.
+            The Next-Gen Science System
           </h2>
           <figure>
             <blockquote>
-              <p className="mt-6 max-w-3xl mx-auto text-lg">
-                In a world where{' '}
-                <a className="text-sky-500 font-semibold dark:text-sky-400">centralized science</a>{' '}
-                often means restricted access, slow progress, and gatekeepers controlling the flow
-                of knowledge, it’s time for a revolution.
-                <a className="text-sky-500 font-semibold dark:text-sky-400">desci.cyou</a> invites
-                you to be part of something bigger—something better.
-                <a className="text-sky-500 font-semibold dark:text-sky-400">
-                  Decentralized science
-                </a>{' '}
-                shatters the barriers that hold innovation back, putting the power of discovery in
-                the hands of everyone. Imagine a world where breakthroughs aren’t delayed by
-                bureaucracy, where every voice can contribute, and where knowledge is shared freely
-                for the benefit of all. That’s the future we’re building, and we need you to help
-                make it a reality. This is{' '}
-                <a className="text-sky-500 font-semibold dark:text-sky-400">
-                  science by the people. See you on the frontlines of change!
-                </a>{' '}
+              <p className="mt-6 max-w-3xl mx-auto text-l">
+                We're revolutionizing research through Web3, bridging the gap between Industry and Academia
               </p>
+              <ul className="mt-4 max-w-3xl mx-auto text-l space-y-2">
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span><b>Web3-powered Grant-Topic Matcher</b> — discovering unexplored interdisciplinary areas</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span><b>Grant-Researcher Matcher</b> — connecting sponsors with researchers</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span><b>Next-Gen Open Conf System</b> — transparent & immutable funding flows and on-chain activities</span>
+                </li>
+                {/* <li className="flex items-start">
+                  <span className="mr-2">•</span>
+                  <span><b>Next-Gen Publishing Platform</b> — where everyone can contribute their academic insights</span>
+                </li> */}
+              </ul>
             </blockquote>
-            {/* <figcaption className="mt-6 flex items-center justify-center space-x-4 text-left">
-              <img
-                src={require('@/img/adam.jpg').default.src}
-                alt=""
-                className="w-14 h-14 rounded-full"
-                loading="lazy"
-                decoding="async"
-              />
-              <div>
-                <div className="text-slate-900 font-semibold dark:text-white">Diven</div>
-                <div className="mt-0.5 text-sm leading-6">Creator of Desci Cyou</div>
-              </div>
-            </figcaption> */}
           </figure>
         </section>
       </div>

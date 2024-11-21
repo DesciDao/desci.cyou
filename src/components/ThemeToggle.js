@@ -5,7 +5,7 @@ import { Fragment, useEffect, useRef } from 'react'
 import create from 'zustand'
 
 const useSetting = create((set) => ({
-  setting: null,
+  setting: 'dark',
   setSetting: (setting) => set({ setting }),
 }))
 
@@ -13,7 +13,7 @@ function update() {
   document.documentElement.classList.add('changing-theme')
   if (
     localStorage.theme === 'dark' ||
-    (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)
+    (!('theme' in localStorage) && (window.matchMedia('(prefers-color-scheme: dark)').matches || true))
   ) {
     document.documentElement.classList.add('dark')
     document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0B1120')
@@ -119,10 +119,11 @@ function useTheme() {
 
   useIsomorphicLayoutEffect(() => {
     let theme = localStorage.theme
-    if (theme === 'light' || theme === 'dark') {
-      setSetting(theme)
+    if (theme === 'light') {
+      setSetting('light')
     } else {
-      setSetting('system')
+      setSetting('dark')
+      localStorage.theme = 'dark'
     }
   }, [])
 

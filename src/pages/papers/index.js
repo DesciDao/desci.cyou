@@ -32,10 +32,10 @@ export default function Papers() {
     <main className="max-w-[52rem] mx-auto px-4 pb-28 sm:px-6 md:px-8 xl:px-12 lg:max-w-6xl">
       <header className="py-16 sm:text-center">
         <h1 className="mb-4 text-3xl sm:text-4xl tracking-tight text-slate-900 font-extrabold dark:text-slate-200">
-          Latest AI Research Papers
+          Latest Papers of URANIA
         </h1>
         <p className="text-lg text-slate-700 dark:text-slate-400">
-          Discover the latest advancements in AI research.
+          Computer Science, Social Sciences, Business and More.
         </p>
       </header>
 
@@ -104,7 +104,7 @@ export default function Papers() {
 
 Papers.layoutProps = {
   meta: {
-    title: 'AI Research Papers',
-    description: 'Latest AI research papers from arXiv.',
+    title: 'URANIA Papers',
+    description: 'The papers from URANIA.',
   },
 }
