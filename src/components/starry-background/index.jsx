@@ -17,7 +17,7 @@ const StarryBackground = () => {
     const scene = new THREE.Scene();
     scene.background = new THREE.Color(0x160016);
     const camera = new THREE.PerspectiveCamera(60, width / height, 1, 1000);
-    camera.position.set(0, 4, 21);
+    camera.position.set(0, 4, 35);
 
     // Renderer setup
     const renderer = new THREE.WebGLRenderer();
@@ -57,19 +57,19 @@ const StarryBackground = () => {
     };
 
     // Create points
-    const pts = new Array(50000).fill().map(() => {
-      sizes.push(Math.random() * 1.5 + 0.5);
+    const pts = new Array(25000).fill().map(() => {
+      sizes.push(Math.random() * 1.2 + 0.3);
       pushShift();
-      return new THREE.Vector3().randomDirection().multiplyScalar(Math.random() * 0.5 + 9.5);
+      return new THREE.Vector3().randomDirection().multiplyScalar(Math.random() * 0.5 + 15.5);
     });
 
     // Additional points
-    for (let i = 0; i < 100000; i++) {
-      let r = 10, R = 40;
+    for (let i = 0; i < 50000; i++) {
+      let r = 15, R = 45;
       let rand = Math.pow(Math.random(), 1.5);
       let radius = Math.sqrt(R * R * rand + (1 - rand) * r * r);
       pts.push(new THREE.Vector3().setFromCylindricalCoords(radius, Math.random() * 2 * Math.PI, (Math.random() - 0.5) * 2));
-      sizes.push(Math.random() * 1.5 + 0.5);
+      sizes.push(Math.random() * 1.2 + 0.3);
       pushShift();
     }
 
@@ -79,7 +79,7 @@ const StarryBackground = () => {
     geometry.setAttribute('shift', new THREE.Float32BufferAttribute(shift, 4));
 
     const material = new THREE.PointsMaterial({
-      size: 0.125,
+      size: 0.085,
       transparent: true,
       depthTest: false,
       blending: THREE.AdditiveBlending,
