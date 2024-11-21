@@ -215,7 +215,7 @@ export function Testimonials() {
       tabIndex="-1"
       className="relative max-w-7xl mx-auto px-4 focus:outline-none sm:px-3 md:px-5"
     >
-      <h2 className="text-center text-slate-900 text-4xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
+      <h2 className="text-center text-slate-900 text-4xl tracking-tight font-extrabold sm:text-5xl dark:text-white px-2 break-words">
         Researchers
       </h2>
       <br></br>
@@ -223,7 +223,8 @@ export function Testimonials() {
         ref={inViewRef}
         className={clsx(
           'grid grid-cols-1 gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3',
-          !expanded && 'max-h-[33rem] overflow-hidden'
+          // 移除 max-height 和 overflow-hidden 的限制
+          // !expanded && 'max-h-[33rem] overflow-hidden'
         )}
       >
         {testimonials.map((column, i) => (
@@ -231,8 +232,9 @@ export function Testimonials() {
             key={i}
             className={clsx(
               'space-y-8',
-              i === 1 && 'hidden sm:block',
-              i === 2 && 'hidden lg:block'
+              // 修改响应式显示逻辑，确保在移动端显示所有内容
+              i === 1 && 'sm:block',
+              i === 2 && 'lg:block'
             )}
           >
             {column.map((testimonial) => (

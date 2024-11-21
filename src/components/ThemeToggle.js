@@ -118,13 +118,14 @@ function useTheme() {
   let initial = useRef(true)
 
   useIsomorphicLayoutEffect(() => {
-    let theme = localStorage.theme
-    if (theme === 'light') {
-      setSetting('light')
-    } else {
-      setSetting('dark')
-      localStorage.theme = 'dark'
-    }
+    setSetting('dark')
+    // let theme = localStorage.theme
+    // if (theme === 'light') {
+    //   setSetting('light')
+    // } else {
+    //   setSetting('dark')
+    //   localStorage.theme = 'dark'
+    // }
   }, [])
 
   useIsomorphicLayoutEffect(() => {

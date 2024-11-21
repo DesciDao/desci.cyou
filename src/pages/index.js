@@ -46,7 +46,7 @@ function Header() {
         </div>
         <div className="relative pt-6 lg:pt-8 flex items-center justify-between text-slate-700 font-semibold text-sm leading-6 dark:text-slate-200">
           <div className="flex items-center">
-            <Logo className="w-auto h-10 mr-8" />
+            {/* <Logo className="w-auto h-10 mr-8" /> */}
             <nav>
               <ul className="flex items-center gap-x-8">
                 <NavItems />
@@ -108,13 +108,12 @@ function Header() {
           </div>
         </div>
         <div className="relative max-w-5xl mx-auto pt-20 sm:pt-24 lg:pt-32">
-          <div className="flex items-start justify-between">
-            <div>
-              <h1 className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight text-left dark:text-white">
+          <div className="flex flex-col-reverse md:flex-row items-center md:items-start justify-between">
+            <div className="text-center md:text-left mt-8 md:mt-0">
+              <h1 className="text-slate-900 font-extrabold text-4xl sm:text-5xl lg:text-6xl tracking-tight dark:text-white">
                 SCIW3.org
               </h1>
-              <br></br>
-              <p className="mt-6 text-lg text-slate-600 max-w-3xl dark:text-slate-400 text-left">
+              <p className="mt-6 text-lg text-slate-600 max-w-3xl dark:text-slate-400">
                 Buidl the Web3-powered Science System for the
                 <code className="font-mono font-medium text-sky-500 dark:text-sky-400">
                   {' '}
@@ -123,7 +122,11 @@ function Header() {
                 Generation.
               </p>
             </div>
-            <img src={urania.src} alt="URANIA" className="w-80 object-contain" />
+            <img 
+              src={urania.src} 
+              alt="URANIA" 
+              className="w-48 md:w-80 object-contain"
+            />
           </div>
         </div>
       </div>
@@ -153,7 +156,7 @@ export default function Home() {
       <div className="mb-20 overflow-hidden sm:mb-32 md:mb-40">
         <Header />
 
-        <section className="text-center px-8 mt-20 sm:mt-32 md:mt-40">
+        <section className="text-center px-4 sm:px-8 mt-20 sm:mt-32 md:mt-40">
           <h2 className="text-slate-900 text-4xl tracking-tight font-extrabold sm:text-5xl dark:text-white">
             The Next-Gen Science System
           </h2>
@@ -162,23 +165,19 @@ export default function Home() {
               <p className="mt-6 max-w-3xl mx-auto text-l">
                 We're revolutionizing research through Web3, bridging the gap between Industry and Academia
               </p>
-              <ul className="mt-4 max-w-3xl mx-auto text-l space-y-2">
+              <ul className="mt-4 max-w-3xl mx-auto text-l space-y-2 px-4 sm:px-0">
                 <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span><b>Web3-powered Grant-Topic Matcher</b> — discovering unexplored interdisciplinary areas</span>
+                  <span className="flex-shrink-0 mr-2">•</span>
+                  <span className="flex-1"><b>Web3-powered Grant-Topic Matcher</b> — discovering unexplored interdisciplinary areas</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span><b>Grant-Researcher Matcher</b> — connecting sponsors with researchers</span>
+                  <span className="flex-shrink-0 mr-2">•</span>
+                  <span className="flex-1"><b>Grant-Researcher Matcher</b> — connecting sponsors with researchers</span>
                 </li>
                 <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span><b>Next-Gen Open Conf System</b> — transparent & immutable funding flows and on-chain activities</span>
+                  <span className="flex-shrink-0 mr-2">•</span>
+                  <span className="flex-1"><b>Next-Gen Open Conf System</b> — transparent & immutable funding flows and on-chain activities</span>
                 </li>
-                {/* <li className="flex items-start">
-                  <span className="mr-2">•</span>
-                  <span><b>Next-Gen Publishing Platform</b> — where everyone can contribute their academic insights</span>
-                </li> */}
               </ul>
             </blockquote>
           </figure>
