@@ -77,7 +77,7 @@ function Header() {
             <div className="ml-6 flex items-center border-l border-slate-200 pl-6 dark:border-slate-800">
               <ThemeToggle />
               <a
-                href="https://github.com/DesciDao/desci.cyou"
+                href="https://github.com/sciw3/desci.cyou"
                 className="ml-6 block text-slate-400 hover:text-slate-500 dark:hover:text-slate-300"
               >
                 <span className="sr-only">Desci Cyou on GitHub</span>

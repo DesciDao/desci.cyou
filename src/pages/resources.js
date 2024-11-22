@@ -335,7 +335,7 @@ export default function Resources() {
               },
               {
                 title: 'GitHub Discussions',
-                href: 'https://github.com/DesciDao/desci.cyou/discussions',
+                href: 'https://github.com/sciw3/desci.cyou/discussions',
                 description:
                   'Have an issue with your project? Connect with other members of the Desci Cyou APPcommunity to get some assistance.',
                 icon: (

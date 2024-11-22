@@ -31,7 +31,7 @@
   },
   {
     "source": "/community",
-    "destination": "https://github.com/DesciDao/desci.cyou/discussions",
+    "destination": "https://github.com/sciw3/desci.cyou/discussions",
     "permanent": false
   },
   {

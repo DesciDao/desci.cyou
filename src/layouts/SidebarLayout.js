@@ -454,7 +454,7 @@ function TopLevelNav({ mobile }) {
       </TopLevelLink>
       <TopLevelLink
         mobile={mobile}
-        href="https://github.com/DesciDao/desci.cyou/discussions"
+        href="https://github.com/sciw3/desci.cyou/discussions"
         className="mb-4"
         shadow="group-hover:shadow-violet-200 dark:group-hover:bg-violet-500"
         icon={
