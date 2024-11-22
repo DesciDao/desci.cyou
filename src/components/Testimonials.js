@@ -81,13 +81,18 @@ let testimonials = [
       },
     },
     {
-      tags: ['Business Intelligence', 'FinTech'],
+      tags: ['Blockchain', 'FinTech', 'Data Science'],
       content:
         'Have been working with science work for over ten years and Desci Cyou APPjust makes my life easier. It is still science work and you use flex, grid, etc. but just quicker to write and maintain.',
       url: 'https://www.uowdubai.ac.ae/teaching/faculties/school-business/dr-ziang-wang',
       author: {
         name: `Nova`,
-        role: <>Assistant Professor, University of Wollongong in Dubai, UAE</>,
+        role: (
+          <>
+            Associate Professor, Director of Blockchain Innvation and Analytics Lab, University of
+            Wollongong
+          </>
+        ),
         avatar: require('@/img/avatars/debbie-obrien.jpg').default.src,
       },
     },
@@ -222,7 +227,7 @@ export function Testimonials() {
       <div
         ref={inViewRef}
         className={clsx(
-          'grid grid-cols-1 gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3',
+          'grid grid-cols-1 gap-6 lg:gap-8 sm:grid-cols-2 lg:grid-cols-3'
           // 移除 max-height 和 overflow-hidden 的限制
           // !expanded && 'max-h-[33rem] overflow-hidden'
         )}

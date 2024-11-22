@@ -26,7 +26,7 @@ export default async function buildRss() {
     },
     author: {
       name: 'Diven',
-      link: 'https://twitter.com/@aboutdreamfly',
+      link: 'https://github.com/SCIW3',
     },
   })
 

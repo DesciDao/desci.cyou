@@ -13,8 +13,8 @@ const footerNav = [
       { title: 'The University of Tokyo', href: 'https://www.u-tokyo.ac.jp/ja/index.html' },
       { title: 'University of Alberta', href: 'https://www.ualberta.ca/en/index.html' },
       {
-        title: 'NCU AI Research Institute',
-        href: 'http://ie.ncu.edu.cn/kxyj/kypt/43fd339753aa4f6e9b2755589419ac9b.htm',
+        title: 'University of Wollongong',
+        href: 'https://sciw3.org',
       },
     ],
     // CooperatingInstitutions: [
